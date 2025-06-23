@@ -44,3 +44,22 @@ This server is for local/private use only. It does not implement authentication 
 
 ## License
 MIT
+
+## Installation on Raspberry Pi (as a Service)
+
+1. **Download and run the installation script:**
+   ```sh
+   curl -O https://raw.githubusercontent.com/ahmedjama/mpd-web/main/install_mpd_web_service.sh
+   chmod +x install_mpd_web_service.sh
+   ./install_mpd_web_service.sh
+   ```
+   This will install dependencies, download the latest `mpd_web.py`, and set up the service.
+
+2. **Access the web interface:**
+   - Open your browser and go to `http://<raspberry-pi-ip>:8080`
+
+3. **Service management:**
+   - To check status: `sudo systemctl status mpd-web`
+   - To stop: `sudo systemctl stop mpd-web`
+   - To start: `sudo systemctl start mpd-web`
+   - To restart: `sudo systemctl restart mpd-web`
